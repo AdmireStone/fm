@@ -1,3 +1,5 @@
+# -*-coding:utf8-*-
+
 import pickle
 from boost2block import *
 
@@ -20,7 +22,7 @@ if __name__=='__main__':
     
     flod_name='u1'
     train_data_file = datapath+flod_name+'_b.pkl'
-    X_ci, X_cj=load_data(train_data_file)
+    X_ci, X_cj=load_data_file(train_data_file)
     context_num=X_ci.shape[0]
     W,Z=train(boosting_iters=10, X_uv=X_ci, X_uf=X_cj, linear_epoc=10, batch_size=1000, eta=1,
             a_1=0.01, a_3=0.001, lambda_epsilon=0.1, context_num=10)

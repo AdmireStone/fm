@@ -35,22 +35,28 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
     '''
     d_dim=X_uv.shape[1]
     U,W_old,Z=initial(context_num,d_dim)
+    
+    print 'sum(U):',np.sum(U)
+    
     for iter_count in range(boosting_iters):
         print '#############boosting_iter:',iter_count,'#########################'
 
         linearSolver=LinearSolver(batch_size,linear_epoc,X_uv,X_uf,Z,a_1,eta)
 
         W=linearSolver.fit()
-        print 'W is finished:',W.shape,' W[0]=',W[0]
+        print 'W is finished:',W.shape
+        print 'w>100 total has :',np.sum(W>100)
         # 更新Z
         z_t,eigenval=QuadraticSolver.getComponentZ_eigval(context_num, U,d_dim,X_uv,X_uf)
         print 'Z_t eigenval is finished:',Z.shape,eigenval
         if np.abs(eigenval) < a_3:
             break;
+        print 'lambdaSearch for t#####################'
         lambda_t=QuadraticSolver.lambdaSearch(context_num,z_t,U,a_3,lambda_epsilon,[0,100],W,W_old,X_uv,X_uf)
         print 'lambda_t is finished:',lambda_t
         U=QuadraticSolver.updateU(context_num,U,z_t,lambda_t,W,W_old,X_uv,X_uf)
-        print 'update U  is finished'
+        print 'update U  is finished，the sum(u)=:',np.sum(U)
+        W_old=W
         Z+=lambda_t*z_t
         ## 这里输出损失total loss ,boosting 的第n次
     return W,Z

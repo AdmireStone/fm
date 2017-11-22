@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import scipy.sparse as sp
 import pickle
+import sys
+import time
 
 
 
@@ -57,9 +59,9 @@ def createTraininData(train_file,userIdOneHot,itemIDOneHot,u_data,user_set,min_t
             movieID=sythetic_data.loc[index]['itemID']
             neg_movieID=sythetic_data.loc[index]['negItemID']
             
-            oht_userID=sp.csc_matrix(userIdOneHot.loc[userID-1].to_dense().values,(1, d_userID))
-            oht_movieID=sp.csc_matrix(itemIDOneHot.loc[movieID-1].to_dense().values,(1, d_itemID))
-            oht_neg_ItemID=sp.csc_matrix(itemIDOneHot.loc[neg_movieID-1].to_dense().values,(1, d_itemID))
+            oht_userID=sp.csc_matrix(userIdOneHot.loc[userID-1].to_dense().values,dtype='f')
+            oht_movieID=sp.csc_matrix(itemIDOneHot.loc[movieID-1].to_dense().values,dtype='f')
+            oht_neg_ItemID=sp.csc_matrix(itemIDOneHot.loc[neg_movieID-1].to_dense().values,dtype='f')
             
             x_ci=sp.hstack([oht_userID,oht_movieID])
             if X_ci == None:
@@ -75,9 +77,14 @@ def createTraininData(train_file,userIdOneHot,itemIDOneHot,u_data,user_set,min_t
                 X_cj=x_cj
             else:
                 X_cj=sp.vstack([X_cj,x_cj])
+                
             if isDebug:        
                 if index > 100:
                     break
+                    
+            sys.stdout.write("\rHandling context %d of %d" % (index+1,total_num))
+            sys.stdout.flush()    
+            
         return X_ci,X_cj  
     X_ci,X_cj=createX_ciX_cj(slide_data)
     return X_ci,X_cj
@@ -108,20 +115,28 @@ def data_process(flod_name):
     base_file=datapath+flod_name+'.base'
     test_file=datapath+flod_name+'.test'
     print 'Begin process:'+flod_name+'.base'+'.............'
+    
+    start=time.time()
+    
     b_X_ci,b_X_cj=createTraininData(base_file,userID_sparseOnehot,itemID_sparseOnehot,
                                     u_data,user_set,1,1682,isDebug=False)
     print 'b_X_ci:',b_X_ci.shape,type(b_X_ci)
     print 'b_X_cj:',b_X_cj.shape,type(b_X_cj)
+    print '耗时:',(start-time.time())/60,'min'
     
     b_file_name=datapath+flod_name+'_b.pkl'
     save2pkl(b_file_name,b_X_ci,b_X_cj)
   
     print 'Begin process:'+flod_name+'.test'+'.............'
+    start=time.time()
+    
     t_X_ci,t_X_cj=createTraininData(test_file,userID_sparseOnehot,itemID_sparseOnehot,
                                     u_data,user_set,1,1682,isDebug=False)
     
     print 't_X_ci:',t_X_ci.shape,type(t_X_ci)
     print 't_X_cj:',t_X_cj.shape,type(t_X_cj)
+    print '耗时:',(start-time.time())/60,'min'
+    
     t_file_name=datapath+flod_name+'_t.pkl'
     save2pkl(t_file_name,t_X_ci,t_X_cj)
     print '##########################Generation End###########################'
