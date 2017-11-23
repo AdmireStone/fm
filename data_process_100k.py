@@ -143,6 +143,7 @@ def data_process(flod_name):
       
   
 if __name__=='__main__':
+    # To DO: 删掉对test数据的处理，因为测试的时候不需要使用合成数据
     data_process('u1')
   
   

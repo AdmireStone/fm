@@ -10,6 +10,9 @@ from sklearn.utils.extmath import safe_sparse_dot
 from scipy.sparse.linalg import LinearOperator, eigsh,eigs
 import time
 import traceback
+import sys
+import datetime
+import os
 
 
 def initial(context_num,d_dim):
@@ -19,7 +22,12 @@ def initial(context_num,d_dim):
     Z=sp.csr_matrix((d_dim,d_dim),dtype='f')
     return U,W_old,Z
 
-
+def save2pkl(iter_count,flod_name,datapath,Z,W):
+    fo=open(datapath+flod_name+'_iter_'+str(iter_count)+'_save_weight.pkl','wb')
+    pickle.dump(W,fo)
+    pickle.dump(Z, fo)
+    fo.close()
+    
 def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_epsilon,context_num):
     '''
     :param boosting_iters
@@ -36,6 +44,13 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
     d_dim=X_uv.shape[1]
     U,W_old,Z=initial(context_num,d_dim)
     
+    # create a folder to save the weight
+    modelPath='models_'+str(datetime.datetime.now().month)+'_'+str(datetime.datetime.now().day)+'_'
+    modelPath+=str(datetime.datetime.now().hour)
+    datapath='/home/zju/dgl/dataset/recommend/ml-100k/'
+    modelPath=datapath+modelPath+'/'
+    os.makedirs(modelPath)
+    
     print 'sum(U):',np.sum(U)
     
     for iter_count in range(boosting_iters):
@@ -45,7 +60,6 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
 
         W=linearSolver.fit()
         print 'W is finished:',W.shape
-        print 'w>100 total has :',np.sum(W>100)
         # 更新Z
         z_t,eigenval=QuadraticSolver.getComponentZ_eigval(context_num, U,d_dim,X_uv,X_uf)
         print 'Z_t eigenval is finished:',Z.shape,eigenval
@@ -58,7 +72,11 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
         print 'update U  is finished，the sum(u)=:',np.sum(U)
         W_old=W
         Z+=lambda_t*z_t
+        
+        # To do : change to genearal
+        save2pkl(iter_count,'u1',modelPath,Z,W)
         ## 这里输出损失total loss ,boosting 的第n次
+        
     return W,Z
 
 

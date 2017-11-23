@@ -33,13 +33,14 @@ class QuadraticSolver():
         :param s_dim: 输入向量的维度
         :return: sum(u_rA_r) it is a matrix
         '''
-        
-        A = sp.csr_matrix((s_dim, s_dim), dtype='f')
+        A = None
         for c in range(context_num):
             try:
                 Ac = QuadraticSolver.getA_c(c, X_uv, X_uf)
-                U[c] * Ac
-                A += U[c] * Ac
+                if A == None:
+                    A=U[c] * Ac
+                else:
+                    A += U[c] * Ac
             except Exception:
                 #print 'AC:', Ac.shape, type(Ac)
                 print 'A:', A.shape, type(A)
@@ -63,8 +64,8 @@ class QuadraticSolver():
     def getGamma(W, X_uv, X_uf):
         '''
         :param W the transform of W, is a column vector
-        :param X_uv should be a row matrix or a row vecotr
-        :param X_uf should be a row matrix or a row vecotr
+        :param X_uv should be a row matrix or a row vecotr  csr_matrix
+        :param X_uf should be a row matrix or a row vecotr  csr_matrix
         '''
         B = X_uv - X_uf
         temp = safe_sparse_dot(B, W).data
@@ -80,9 +81,21 @@ class QuadraticSolver():
         '''
         x_ci = X_ci[index]
         x_cj = X_cj[index]
-        gamma = QuadraticSolver.getGamma(W, x_ci, x_cj)
+        gamma = QuadraticSolver.getGamma(W, x_ci, x_cj)  
         gamma_old = QuadraticSolver.getGamma(W_last, x_ci, x_cj)
-        return gamma / gamma_old
+        gr = gamma / gamma_old
+        
+        if gr == 0:
+            print '###########gr==0 exception############'
+            fo=open('gr_excpt.pkl','wb')
+            pickle.dump(index,fo)
+            pickle.dump(x_ci,fo)
+            pickle.dump(x_cj,fo)
+            pickle.dump(W,fo)
+            pickle.dump(W_last,fo)
+            fo.close()
+            raise Exception('gr==0出异常了！')
+        return gr
     
     @staticmethod
     def getComponentZ_eigval(context_num, U, s_dim, X_uv, X_uf):
@@ -143,14 +156,28 @@ class QuadraticSolver():
          原始：U[1]=12
          计算后：U[1]=[12]
         '''
+        print 'befroe update U[:10]:',U[:10]
         for c in range(context_num):
             Ac = QuadraticSolver.getA_c(c, X_uv, X_uf)
             gr = QuadraticSolver.getGammaRelativeRatio(c, W, W_old,X_uv,X_uf)
             Hc = QuadraticSolver.get_Hc(Ac=Ac, z_t=z_t)
             # 注意：等式右边，计算结果不是一个值，而是一个大小为1的数组，所以要加上[0]
             U[c] = (gr * U[c] * np.exp(-lambda_t * Hc))[0]
-        # 别忘了归一化
-        U = U / (np.sum(U))
+            
+            if U[c]==0:
+                print '########### U[c]==0 exception############'
+                fo=open('U_c_excpt.pkl','wb')
+                pickle.dump(gr,fo)
+                pickle.dump(lambda_t,fo)
+                pickle.dump(Hc,fo)
+                pickle.dump(Ac,fo)
+                pickle.dump(z_t,fo)
+                fo.close()
+                raise Exception('U[c]==0:出异常了！')
+            
+        # 归一化  
+        normal_factor=np.sum(U)
+        U = U/(normal_factor)            
         return U
 
 
