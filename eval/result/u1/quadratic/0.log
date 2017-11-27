@@ -1,0 +1,923 @@
+##############Evaluation: 参数.....##############
+Namespace(datapath='/home/zju/dgl/dataset/recommend/ml-100k/', eval_num=500, flod_name='u1', iter_num='0', weightpath='/home/zju/dgl/dataset/recommend/ml-100k/models_11_23_20/')
+##############Evaluation: loading data.....##############
+##############Evaluation: evaluating data.....##############
+Handling context 1 of 459
+context: 1   curr_acc: 0.787376278553   avg_acc： 0.787376278553
+Handling context 2 of 459
+context: 2   curr_acc: 0.727327491785   avg_acc： 0.757351885169
+Handling context 3 of 459
+context: 3   curr_acc: 0.671660163508   avg_acc： 0.728787977949
+Handling context 4 of 459
+context: 4   curr_acc: 0.761483253589   avg_acc： 0.736961796859
+Handling context 5 of 459
+context: 5   curr_acc: 0.73087639311   avg_acc： 0.735744716109
+Handling context 6 of 459
+context: 6   curr_acc: 0.843644516254   avg_acc： 0.753728016133
+Handling context 7 of 459
+context: 7   curr_acc: 0.777631578947   avg_acc： 0.757142810821
+Handling context 8 of 459
+context: 8   curr_acc: 0.887080960427   avg_acc： 0.773385079522
+Handling context 9 of 459
+context: 9   curr_acc: 0.766447368421   avg_acc： 0.772614222733
+Handling context 10 of 459
+context: 10   curr_acc: 0.829773869347   avg_acc： 0.778330187394
+Handling context 11 of 459
+context: 11   curr_acc: 0.742315002949   avg_acc： 0.775056079717
+Handling context 12 of 459
+context: 12   curr_acc: 0.913647342995   avg_acc： 0.786605351657
+Handling context 13 of 459
+context: 13   curr_acc: 0.701956339413   avg_acc： 0.780093889177
+Handling context 14 of 459
+context: 14   curr_acc: 0.900005398111   avg_acc： 0.788658996958
+Handling context 15 of 459
+context: 15   curr_acc: 0.758963258963   avg_acc： 0.786679281092
+Handling context 16 of 459
+context: 16   curr_acc: 0.871587064285   avg_acc： 0.791986017541
+Handling context 17 of 459
+context: 17   curr_acc: 0.936773593677   avg_acc： 0.800502933785
+Handling context 18 of 459
+context: 18   curr_acc: 0.772644024448   avg_acc： 0.798955216599
+Handling context 19 of 459
+context: 19   curr_acc: 0.93211722488   avg_acc： 0.805963743351
+Handling context 20 of 459
+context: 20   curr_acc: 0.942141292442   avg_acc： 0.812772620805
+Handling context 21 of 459
+context: 21   curr_acc: 0.684933547887   avg_acc： 0.806685045905
+Handling context 22 of 459
+context: 22   curr_acc: 0.808911584848   avg_acc： 0.80678625222
+Handling context 23 of 459
+context: 23   curr_acc: 0.880300400992   avg_acc： 0.809982519558
+Handling context 24 of 459
+context: 24   curr_acc: 0.90996978852   avg_acc： 0.814148655765
+Handling context 25 of 459
+context: 25   curr_acc: 0.878978066212   avg_acc： 0.816741832183
+Handling context 26 of 459
+context: 26   curr_acc: 0.8391670754   avg_acc： 0.817604341537
+Handling context 27 of 459
+context: 27   curr_acc: 0.780723855229   avg_acc： 0.8162383976
+Handling context 28 of 459
+context: 28   curr_acc: 0.898507917174   avg_acc： 0.819176594728
+Handling context 29 of 459
+context: 29   curr_acc: 0.797774244833   avg_acc： 0.818438582662
+Handling context 30 of 459
+context: 30   curr_acc: 0.831029647436   avg_acc： 0.818858284821
+Handling context 31 of 459
+context: 31   curr_acc: 0.709683366364   avg_acc： 0.815336513258
+Handling context 32 of 459
+context: 32   curr_acc: 0.874196917429   avg_acc： 0.817175900889
+Handling context 33 of 459
+context: 33   curr_acc: 0.849222488038   avg_acc： 0.81814700959
+Handling context 34 of 459
+context: 34   curr_acc: 0.754844497608   avg_acc： 0.816285171002
+Handling context 35 of 459
+context: 35   curr_acc: 0.630749701314   avg_acc： 0.810984157583
+Handling context 36 of 459
+context: 36   curr_acc: 0.611392198466   avg_acc： 0.805439936496
+Handling context 37 of 459
+context: 37   curr_acc: 0.836251504212   avg_acc： 0.806272681569
+Handling context 38 of 459
+context: 38   curr_acc: 0.793453796501   avg_acc： 0.805935342489
+Handling context 39 of 459
+context: 39   curr_acc: 0.743375174338   avg_acc： 0.804331235613
+Handling context 40 of 459
+context: 40   curr_acc: 0.771028252754   avg_acc： 0.803498661042
+Handling context 41 of 459
+context: 41   curr_acc: 0.919813078753   avg_acc： 0.806335598059
+Handling context 42 of 459
+context: 42   curr_acc: 0.818863794647   avg_acc： 0.806633888454
+Handling context 43 of 459
+context: 43   curr_acc: 0.849460797751   avg_acc： 0.807629863089
+Handling context 44 of 459
+context: 44   curr_acc: 0.892578312832   avg_acc： 0.809560509674
+Handling context 45 of 459
+context: 45   curr_acc: 0.766971547932   avg_acc： 0.808614088302
+Handling context 46 of 459
+context: 46   curr_acc: 0.768870048019   avg_acc： 0.807750087426
+Handling context 47 of 459
+context: 47   curr_acc: 0.78036793518   avg_acc： 0.807167488442
+Handling context 48 of 459
+context: 48   curr_acc: 0.826506422625   avg_acc： 0.807570382904
+Handling context 49 of 459
+context: 49   curr_acc: 0.768177325992   avg_acc： 0.806766442967
+Handling context 50 of 459
+context: 50   curr_acc: 0.740873728306   avg_acc： 0.805448588674
+Handling context 51 of 459
+context: 51   curr_acc: 0.892707889126   avg_acc： 0.80715955535
+Handling context 52 of 459
+context: 52   curr_acc: 0.843639803905   avg_acc： 0.807861098591
+Handling context 53 of 459
+context: 53   curr_acc: 0.919411177645   avg_acc： 0.809965817064
+Handling context 54 of 459
+context: 54   curr_acc: 0.836828866337   avg_acc： 0.810463280939
+Handling context 55 of 459
+context: 55   curr_acc: 0.827376094881   avg_acc： 0.810770786647
+Handling context 56 of 459
+context: 56   curr_acc: 0.845580870892   avg_acc： 0.811392395294
+Handling context 57 of 459
+context: 57   curr_acc: 0.77984898537   avg_acc： 0.810839002138
+Handling context 58 of 459
+context: 58   curr_acc: 0.737805902918   avg_acc： 0.809579810772
+Handling context 59 of 459
+context: 59   curr_acc: 0.805031521116   avg_acc： 0.809502721117
+Handling context 60 of 459
+context: 60   curr_acc: 0.790382078899   avg_acc： 0.809184043746
+Handling context 61 of 459
+context: 61   curr_acc: 0.736999402271   avg_acc： 0.808000688968
+Handling context 62 of 459
+context: 62   curr_acc: 0.818805881358   avg_acc： 0.808174966265
+Handling context 63 of 459
+context: 63   curr_acc: 0.740555216181   avg_acc： 0.807101636898
+Handling context 64 of 459
+context: 64   curr_acc: 0.869064310925   avg_acc： 0.80806980368
+Handling context 65 of 459
+context: 65   curr_acc: 0.880056818182   avg_acc： 0.809177296211
+Handling context 66 of 459
+context: 66   curr_acc: 0.899063769652   avg_acc： 0.810539212475
+Handling context 67 of 459
+context: 67   curr_acc: 0.775407318376   avg_acc： 0.810014855847
+Handling context 68 of 459
+context: 68   curr_acc: 0.932585534214   avg_acc： 0.811817365823
+Handling context 69 of 459
+context: 69   curr_acc: 0.790332326284   avg_acc： 0.811505988438
+Handling context 70 of 459
+context: 70   curr_acc: 0.830000455   avg_acc： 0.811770195103
+Handling context 71 of 459
+context: 71   curr_acc: 0.893082232893   avg_acc： 0.812915435072
+Handling context 72 of 459
+context: 72   curr_acc: 0.887138828801   avg_acc： 0.813946315541
+Handling context 73 of 459
+context: 73   curr_acc: 0.87865530303   avg_acc： 0.814832740027
+Handling context 74 of 459
+context: 74   curr_acc: 0.839309561966   avg_acc： 0.815163507891
+Handling context 75 of 459
+context: 75   curr_acc: 0.759111805013   avg_acc： 0.814416151852
+Handling context 76 of 459
+context: 76   curr_acc: 0.775536022345   avg_acc： 0.813904571201
+Handling context 77 of 459
+context: 77   curr_acc: 0.931988165463   avg_acc： 0.815438124373
+Handling context 78 of 459
+context: 78   curr_acc: 0.809040511727   avg_acc： 0.815356103698
+Handling context 79 of 459
+context: 79   curr_acc: 0.722188633615   avg_acc： 0.814176768634
+Handling context 80 of 459
+context: 80   curr_acc: 0.854669066187   avg_acc： 0.814682922353
+Handling context 81 of 459
+context: 81   curr_acc: 0.882298324408   avg_acc： 0.815517680403
+Handling context 82 of 459
+context: 82   curr_acc: 0.840899390244   avg_acc： 0.81582721345
+Handling context 83 of 459
+context: 83   curr_acc: 0.749492252296   avg_acc： 0.815027997051
+Handling context 84 of 459
+context: 84   curr_acc: 0.858684369342   avg_acc： 0.815547715769
+Handling context 85 of 459
+context: 85   curr_acc: 0.806221516744   avg_acc： 0.81543799578
+Handling context 86 of 459
+context: 86   curr_acc: 0.680788423154   avg_acc： 0.813872303075
+Handling context 87 of 459
+context: 87   curr_acc: 0.814632292311   avg_acc： 0.813881038584
+Handling context 88 of 459
+context: 88   curr_acc: 0.658552631579   avg_acc： 0.812115943049
+Handling context 89 of 459
+context: 89   curr_acc: 0.768090995005   avg_acc： 0.811621280712
+Handling context 90 of 459
+context: 90   curr_acc: 0.728697397458   avg_acc： 0.810699904231
+Handling context 91 of 459
+context: 91   curr_acc: 0.825045899633   avg_acc： 0.810857552532
+Handling context 92 of 459
+context: 92   curr_acc: 0.792034306612   avg_acc： 0.810652952033
+Handling context 93 of 459
+context: 93   curr_acc: 0.882596159077   avg_acc： 0.811426534905
+Handling context 94 of 459
+context: 94   curr_acc: 0.755925764858   avg_acc： 0.810836101181
+Handling context 95 of 459
+context: 95   curr_acc: 0.792382505387   avg_acc： 0.810641852804
+Handling context 96 of 459
+context: 96   curr_acc: 0.865218517879   avg_acc： 0.811210359732
+Handling context 97 of 459
+context: 97   curr_acc: 0.891410433581   avg_acc： 0.812037164617
+Handling context 98 of 459
+context: 98   curr_acc: 0.810184429574   avg_acc： 0.812018259157
+Handling context 99 of 459
+context: 99   curr_acc: 0.811445890837   avg_acc： 0.812012477659
+Handling context 100 of 459
+context: 100   curr_acc: 0.627012673506   avg_acc： 0.810162479618
+Handling context 101 of 459
+context: 101   curr_acc: 0.747501929616   avg_acc： 0.809542078132
+Handling context 102 of 459
+context: 102   curr_acc: 0.810403870527   avg_acc： 0.809550527077
+Handling context 103 of 459
+context: 103   curr_acc: 0.954907502569   avg_acc： 0.810961759849
+Handling context 104 of 459
+context: 104   curr_acc: 0.734508873929   avg_acc： 0.810226635946
+Handling context 105 of 459
+context: 105   curr_acc: 0.828912579957   avg_acc： 0.810404597318
+Handling context 106 of 459
+context: 106   curr_acc: 0.820727014986   avg_acc： 0.810501978616
+Handling context 107 of 459
+context: 107   curr_acc: 0.851431228   avg_acc： 0.810884494966
+Handling context 108 of 459
+context: 108   curr_acc: 0.90737545018   avg_acc： 0.811777929736
+Handling context 109 of 459
+context: 109   curr_acc: 0.823495575221   avg_acc： 0.811885431071
+Handling context 110 of 459
+context: 110   curr_acc: 0.706952308821   avg_acc： 0.810931493596
+Handling context 111 of 459
+context: 111   curr_acc: 0.759281437126   avg_acc： 0.810466177772
+Handling context 112 of 459
+context: 112   curr_acc: 0.708378970427   avg_acc： 0.809554684849
+Handling context 113 of 459
+context: 113   curr_acc: 0.742569193742   avg_acc： 0.808961892893
+Handling context 114 of 459
+context: 114   curr_acc: 0.873885496402   avg_acc： 0.809531398186
+Handling context 115 of 459
+context: 115   curr_acc: 0.834371497084   avg_acc： 0.809747399046
+Handling context 116 of 459
+context: 116   curr_acc: 0.697558249986   avg_acc： 0.80878025121
+Handling context 117 of 459
+context: 117   curr_acc: 0.832524509804   avg_acc： 0.808983193591
+Handling context 118 of 459
+context: 118   curr_acc: 0.823539228571   avg_acc： 0.80910654982
+Handling context 119 of 459
+context: 119   curr_acc: 0.744569271457   avg_acc： 0.808564219749
+Handling context 120 of 459
+context: 120   curr_acc: 0.922005988024   avg_acc： 0.809509567818
+Handling context 121 of 459
+context: 121   curr_acc: 0.881693729487   avg_acc： 0.810106131138
+Handling context 122 of 459
+context: 122   curr_acc: 0.782365447018   avg_acc： 0.809878748481
+Handling context 123 of 459
+context: 123   curr_acc: 0.854363307182   avg_acc： 0.81024041156
+Handling context 124 of 459
+context: 124   curr_acc: 0.858373205742   avg_acc： 0.810628579255
+Handling context 125 of 459
+context: 125   curr_acc: 0.742370795734   avg_acc： 0.810082516987
+Handling context 126 of 459
+context: 126   curr_acc: 0.679983570646   avg_acc： 0.809049985667
+Handling context 127 of 459
+context: 127   curr_acc: 0.935079840319   avg_acc： 0.810042346727
+Handling context 128 of 459
+context: 128   curr_acc: 0.820464939024   avg_acc： 0.810123773229
+Handling context 129 of 459
+context: 129   curr_acc: 0.691661667666   avg_acc： 0.809205462333
+Handling context 130 of 459
+context: 130   curr_acc: 0.745697222486   avg_acc： 0.808716937411
+Handling context 131 of 459
+context: 131   curr_acc: 0.828274345131   avg_acc： 0.8088662306
+Handling context 132 of 459
+context: 132   curr_acc: 0.787596899225   avg_acc： 0.808705099302
+Handling context 133 of 459
+context: 133   curr_acc: 0.88254181601   avg_acc： 0.809260262585
+Handling context 134 of 459
+context: 134   curr_acc: 0.882380052542   avg_acc： 0.80980593266
+Handling context 135 of 459
+context: 135   curr_acc: 0.809246248591   avg_acc： 0.809801786852
+Handling context 136 of 459
+context: 136   curr_acc: 0.850029994001   avg_acc： 0.810097582493
+Handling context 137 of 459
+context: 137   curr_acc: 0.864690620332   avg_acc： 0.81049607182
+Handling context 138 of 459
+context: 138   curr_acc: 0.81951145959   avg_acc： 0.810561400717
+Handling context 139 of 459
+context: 139   curr_acc: 0.878461844989   avg_acc： 0.811049893122
+Handling context 140 of 459
+context: 140   curr_acc: 0.760187149774   avg_acc： 0.810686587812
+Handling context 141 of 459
+context: 141   curr_acc: 0.803164924506   avg_acc： 0.810633242682
+Handling context 142 of 459
+context: 142   curr_acc: 0.820343826335   avg_acc： 0.810701627074
+Handling context 143 of 459
+context: 143   curr_acc: 0.596064400716   avg_acc： 0.809200667449
+Handling context 144 of 459
+context: 144   curr_acc: 0.793805400948   avg_acc： 0.809093755876
+Handling context 145 of 459
+context: 145   curr_acc: 0.731175651267   avg_acc： 0.808556389638
+Handling context 146 of 459
+context: 146   curr_acc: 0.604246411483   avg_acc： 0.807157006226
+Handling context 147 of 459
+context: 147   curr_acc: 0.558193779904   avg_acc： 0.805463378836
+Handling context 148 of 459
+context: 148   curr_acc: 0.678371212121   avg_acc： 0.804604647979
+Handling context 149 of 459
+context: 149   curr_acc: 0.508514226647   avg_acc： 0.802617463944
+Handling context 150 of 459
+context: 150   curr_acc: 0.704545454545   avg_acc： 0.801963650548
+Handling context 151 of 459
+context: 151   curr_acc: 0.673109935982   avg_acc： 0.80111031469
+Handling context 152 of 459
+context: 152   curr_acc: 0.674918995545   avg_acc： 0.800280108643
+Handling context 153 of 459
+context: 153   curr_acc: 0.965669856459   avg_acc： 0.801361087386
+Handling context 154 of 459
+context: 154   curr_acc: 0.819536590269   avg_acc： 0.801479110132
+Handling context 155 of 459
+context: 155   curr_acc: 0.672542299113   avg_acc： 0.800647259739
+Handling context 156 of 459
+context: 156   curr_acc: 0.789378738488   avg_acc： 0.800575025628
+Handling context 157 of 459
+context: 157   curr_acc: 0.678126256534   avg_acc： 0.799795097163
+Handling context 158 of 459
+context: 158   curr_acc: 0.726258908162   avg_acc： 0.799329678245
+Handling context 159 of 459
+context: 159   curr_acc: 0.691765911128   avg_acc： 0.798653176565
+Handling context 160 of 459
+context: 160   curr_acc: 0.734438984439   avg_acc： 0.798251837864
+Handling context 161 of 459
+context: 161   curr_acc: 0.804005830318   avg_acc： 0.798287576948
+Handling context 162 of 459
+context: 162   curr_acc: 0.728395399781   avg_acc： 0.797856143755
+Handling context 163 of 459
+context: 163   curr_acc: 0.927870813397   avg_acc： 0.798653779765
+Handling context 164 of 459
+context: 164   curr_acc: 0.641747376917   avg_acc： 0.797697033407
+Handling context 165 of 459
+context: 165   curr_acc: 0.754590818363   avg_acc： 0.797435783618
+Handling context 166 of 459
+context: 166   curr_acc: 0.763815789474   avg_acc： 0.797233253533
+Handling context 167 of 459
+context: 167   curr_acc: 0.614173228346   avg_acc： 0.796137085718
+Handling context 168 of 459
+context: 168   curr_acc: 0.702384351799   avg_acc： 0.79557903373
+Handling context 169 of 459
+context: 169   curr_acc: 0.750171291538   avg_acc： 0.795310348865
+Handling context 170 of 459
+context: 170   curr_acc: 0.57236673774   avg_acc： 0.793998915858
+Handling context 171 of 459
+context: 171   curr_acc: 0.658763365876   avg_acc： 0.793208064689
+Handling context 172 of 459
+context: 172   curr_acc: 0.669638087607   avg_acc： 0.79248963459
+Handling context 173 of 459
+context: 173   curr_acc: 0.764068127251   avg_acc： 0.79232534842
+Handling context 174 of 459
+context: 174   curr_acc: 0.58308464617   avg_acc： 0.791122815649
+Handling context 175 of 459
+context: 175   curr_acc: 0.854469106179   avg_acc： 0.791484794452
+Handling context 176 of 459
+context: 176   curr_acc: 0.563143258507   avg_acc： 0.790187399361
+Handling context 177 of 459
+context: 177   curr_acc: 0.779577630958   avg_acc： 0.790127457167
+Handling context 178 of 459
+context: 178   curr_acc: 0.745395860009   avg_acc： 0.789876156059
+Handling context 179 of 459
+context: 179   curr_acc: 0.507073456341   avg_acc： 0.788296252709
+Handling context 180 of 459
+context: 180   curr_acc: 0.789661430628   avg_acc： 0.78830383703
+Handling context 181 of 459
+context: 181   curr_acc: 0.503732247055   avg_acc： 0.786731618301
+Handling context 182 of 459
+context: 182   curr_acc: 0.849991435423   avg_acc： 0.787079199714
+Handling context 183 of 459
+context: 183   curr_acc: 0.779096889168   avg_acc： 0.787035580531
+Handling context 184 of 459
+context: 184   curr_acc: 0.664007976072   avg_acc： 0.786366952246
+Handling context 185 of 459
+context: 185   curr_acc: 0.718134298351   avg_acc： 0.785998127089
+Handling context 186 of 459
+context: 186   curr_acc: 0.692002442002   avg_acc： 0.785492773944
+Handling context 187 of 459
+context: 187   curr_acc: 0.771330777656   avg_acc： 0.785417041343
+Handling context 188 of 459
+context: 188   curr_acc: 0.80361042861   avg_acc： 0.78551381468
+Handling context 189 of 459
+context: 189   curr_acc: 0.685242023147   avg_acc： 0.7849832761
+Handling context 190 of 459
+context: 190   curr_acc: 0.784102523783   avg_acc： 0.784978640562
+Handling context 191 of 459
+context: 191   curr_acc: 0.677053524112   avg_acc： 0.784413587596
+Handling context 192 of 459
+context: 192   curr_acc: 0.675064987003   avg_acc： 0.783844063635
+Handling context 193 of 459
+context: 193   curr_acc: 0.649506781751   avg_acc： 0.783148015542
+Handling context 194 of 459
+context: 194   curr_acc: 0.754694947677   avg_acc： 0.783001350244
+Handling context 195 of 459
+context: 195   curr_acc: 0.598789771618   avg_acc： 0.782056675482
+Handling context 196 of 459
+context: 196   curr_acc: 0.712106036325   avg_acc： 0.781699784465
+Handling context 197 of 459
+context: 197   curr_acc: 0.741317881788   avg_acc： 0.781494800188
+Handling context 198 of 459
+context: 198   curr_acc: 0.79773490977   avg_acc： 0.781576820943
+Handling context 199 of 459
+context: 199   curr_acc: 0.72764542301   avg_acc： 0.781305808893
+Handling context 200 of 459
+context: 200   curr_acc: 0.669646339086   avg_acc： 0.780747511544
+Handling context 201 of 459
+context: 201   curr_acc: 0.621508547455   avg_acc： 0.779955277892
+Handling context 202 of 459
+context: 202   curr_acc: 0.821918976546   avg_acc： 0.780163018975
+Handling context 203 of 459
+context: 203   curr_acc: 0.800693787449   avg_acc： 0.780264155765
+Handling context 204 of 459
+context: 204   curr_acc: 0.660979636764   avg_acc： 0.779679427731
+Handling context 205 of 459
+context: 205   curr_acc: 0.798852295409   avg_acc： 0.779772953915
+Handling context 206 of 459
+context: 206   curr_acc: 0.58762040601   avg_acc： 0.778840174556
+Handling context 207 of 459
+context: 207   curr_acc: 0.693921753553   avg_acc： 0.778429940638
+Handling context 208 of 459
+context: 208   curr_acc: 0.847124863089   avg_acc： 0.778760204688
+Handling context 209 of 459
+context: 209   curr_acc: 0.496025437202   avg_acc： 0.777407406758
+Handling context 210 of 459
+context: 210   curr_acc: 0.847242134608   avg_acc： 0.777739953081
+Handling context 211 of 459
+context: 211   curr_acc: 0.735294117647   avg_acc： 0.777538787984
+Handling context 212 of 459
+context: 212   curr_acc: 0.953330346476   avg_acc： 0.778367993448
+Handling context 213 of 459
+context: 213   curr_acc: 0.891360422737   avg_acc： 0.778898474337
+Handling context 214 of 459
+context: 214   curr_acc: 0.701869559012   avg_acc： 0.778538526135
+Handling context 215 of 459
+context: 215   curr_acc: 0.894476212098   avg_acc： 0.779077771186
+Handling context 216 of 459
+context: 216   curr_acc: 0.720390266689   avg_acc： 0.778806069776
+Handling context 217 of 459
+context: 217   curr_acc: 0.672456575682   avg_acc： 0.778315979941
+Handling context 218 of 459
+context: 218   curr_acc: 0.72078820698   avg_acc： 0.778052091075
+Handling context 219 of 459
+context: 219   curr_acc: 0.679540918164   avg_acc： 0.777602268367
+Handling context 220 of 459
+context: 220   curr_acc: 0.665618762475   avg_acc： 0.777093252431
+Handling context 221 of 459
+context: 221   curr_acc: 0.599282331833   avg_acc： 0.77628867813
+Handling context 222 of 459
+context: 222   curr_acc: 0.617816091954   avg_acc： 0.775574837652
+Handling context 223 of 459
+context: 223   curr_acc: 0.769426781102   avg_acc： 0.775547267892
+Handling context 224 of 459
+context: 224   curr_acc: 0.543553020189   avg_acc： 0.774511579286
+Handling context 225 of 459
+context: 225   curr_acc: 0.816367265469   avg_acc： 0.774697604558
+Handling context 226 of 459
+context: 226   curr_acc: 0.819919612621   avg_acc： 0.774897701938
+Handling context 227 of 459
+context: 227   curr_acc: 0.674014238773   avg_acc： 0.774453281396
+Handling context 228 of 459
+context: 228   curr_acc: 0.830207262761   avg_acc： 0.774697816402
+Handling context 229 of 459
+context: 229   curr_acc: 0.6975004999   avg_acc： 0.774360710216
+Handling context 230 of 459
+context: 230   curr_acc: 0.730911330049   avg_acc： 0.774171799868
+Handling context 231 of 459
+context: 231   curr_acc: 0.751754529133   avg_acc： 0.774074755406
+Handling context 232 of 459
+context: 232   curr_acc: 0.774622621452   avg_acc： 0.774077116897
+Handling context 233 of 459
+context: 233   curr_acc: 0.748228803717   avg_acc： 0.773966179931
+Handling context 234 of 459
+context: 234   curr_acc: 0.649183837303   avg_acc： 0.773432922056
+Handling context 235 of 459
+context: 235   curr_acc: 0.741700826339   avg_acc： 0.773297891862
+Handling context 236 of 459
+context: 236   curr_acc: 0.737817362817   avg_acc： 0.773147550637
+Handling context 237 of 459
+context: 237   curr_acc: 0.785126573206   avg_acc： 0.773198095036
+Handling context 238 of 459
+context: 238   curr_acc: 0.748850229954   avg_acc： 0.773095793082
+Handling context 239 of 459
+context: 239   curr_acc: 0.670407042577   avg_acc： 0.772666133038
+Handling context 240 of 459
+context: 240   curr_acc: 0.715746828718   avg_acc： 0.77242896927
+Handling context 241 of 459
+context: 241   curr_acc: 0.62619008759   avg_acc： 0.771822168931
+Handling context 242 of 459
+context: 242   curr_acc: 0.410971641097   avg_acc： 0.770331051047
+Handling context 243 of 459
+context: 243   curr_acc: 0.707894559201   avg_acc： 0.770074110752
+Handling context 244 of 459
+context: 244   curr_acc: 0.633864708467   avg_acc： 0.769515875496
+Handling context 245 of 459
+context: 245   curr_acc: 0.866241615196   avg_acc： 0.769910674434
+Handling context 246 of 459
+context: 246   curr_acc: 0.6169542285   avg_acc： 0.769288900264
+Handling context 247 of 459
+context: 247   curr_acc: 0.858767205266   avg_acc： 0.769651160608
+Handling context 248 of 459
+context: 248   curr_acc: 0.840003469512   avg_acc： 0.769934839273
+Handling context 249 of 459
+context: 249   curr_acc: 0.807453416149   avg_acc： 0.770085516288
+Handling context 250 of 459
+context: 250   curr_acc: 0.760464237517   avg_acc： 0.770047031173
+Handling context 251 of 459
+context: 251   curr_acc: 0.815241560542   avg_acc： 0.770227089059
+Handling context 252 of 459
+context: 252   curr_acc: 0.695933014354   avg_acc： 0.769932271302
+Handling context 253 of 459
+context: 253   curr_acc: 0.818388549516   avg_acc： 0.770123798094
+Handling context 254 of 459
+context: 254   curr_acc: 0.663784119941   avg_acc： 0.769705137943
+Handling context 255 of 459
+context: 255   curr_acc: 0.663271173909   avg_acc： 0.769287749849
+Handling context 256 of 459
+context: 256   curr_acc: 0.5798195242   avg_acc： 0.768547639593
+Handling context 257 of 459
+context: 257   curr_acc: 0.677605908584   avg_acc： 0.768193780717
+Handling context 258 of 459
+context: 258   curr_acc: 0.722855428914   avg_acc： 0.768018050671
+Handling context 259 of 459
+context: 259   curr_acc: 0.798715067886   avg_acc： 0.768136571973
+Handling context 260 of 459
+context: 260   curr_acc: 0.583483033932   avg_acc： 0.767426366058
+Handling context 261 of 459
+context: 261   curr_acc: 0.563257375022   avg_acc： 0.766644109387
+Handling context 262 of 459
+context: 262   curr_acc: 0.699253468892   avg_acc： 0.766386893202
+Handling context 263 of 459
+context: 263   curr_acc: 0.795709677736   avg_acc： 0.76649838668
+Handling context 264 of 459
+context: 264   curr_acc: 0.69558974359   avg_acc： 0.766229793334
+Handling context 265 of 459
+context: 265   curr_acc: 0.836819951261   avg_acc： 0.766496171289
+Handling context 266 of 459
+context: 266   curr_acc: 0.664051172708   avg_acc： 0.766111039715
+Handling context 267 of 459
+context: 267   curr_acc: 0.68809273751   avg_acc： 0.765818836336
+Handling context 268 of 459
+context: 268   curr_acc: 0.648607590503   avg_acc： 0.765381480941
+Handling context 269 of 459
+context: 269   curr_acc: 0.637190408979   avg_acc： 0.764904934205
+Handling context 270 of 459
+context: 270   curr_acc: 0.593843759376   avg_acc： 0.764271374299
+Handling context 271 of 459
+context: 271   curr_acc: 0.718713306573   avg_acc： 0.764103263348
+Handling context 272 of 459
+context: 272   curr_acc: 0.705354993983   avg_acc： 0.763887277063
+Handling context 273 of 459
+context: 273   curr_acc: 0.409210526316   avg_acc： 0.762588094826
+Handling context 274 of 459
+context: 274   curr_acc: 0.769223484848   avg_acc： 0.762612311578
+Handling context 275 of 459
+context: 275   curr_acc: 0.742950094346   avg_acc： 0.762540812606
+Handling context 276 of 459
+context: 276   curr_acc: 0.608118311534   avg_acc： 0.761981310791
+Handling context 277 of 459
+context: 277   curr_acc: 0.772342995169   avg_acc： 0.762018717594
+Handling context 278 of 459
+context: 278   curr_acc: 0.737011044013   avg_acc： 0.761928761933
+Handling context 279 of 459
+context: 279   curr_acc: 0.581414289709   avg_acc： 0.761281756656
+Handling context 280 of 459
+context: 280   curr_acc: 0.716935904714   avg_acc： 0.761123378614
+Handling context 281 of 459
+context: 281   curr_acc: 0.436275486485   avg_acc： 0.759967336293
+Handling context 282 of 459
+context: 282   curr_acc: 0.666516966068   avg_acc： 0.759635952001
+Handling context 283 of 459
+context: 283   curr_acc: 0.760748340374   avg_acc： 0.759639882702
+Handling context 284 of 459
+context: 284   curr_acc: 0.59651232712   avg_acc： 0.759065489901
+Handling context 285 of 459
+context: 285   curr_acc: 0.776710684274   avg_acc： 0.759127402864
+Handling context 286 of 459
+context: 286   curr_acc: 0.622318596352   avg_acc： 0.758649050393
+Handling context 287 of 459
+context: 287   curr_acc: 0.77632424329   avg_acc： 0.758710636431
+Handling context 288 of 459
+context: 288   curr_acc: 0.799015151515   avg_acc： 0.758850582664
+Handling context 289 of 459
+context: 289   curr_acc: 0.695914696814   avg_acc： 0.758632811433
+Handling context 290 of 459
+context: 290   curr_acc: 0.774158295521   avg_acc： 0.758686347585
+Handling context 291 of 459
+context: 291   curr_acc: 0.551656523621   avg_acc： 0.757974904891
+Handling context 292 of 459
+context: 292   curr_acc: 0.749799548072   avg_acc： 0.757946907094
+Handling context 293 of 459
+context: 293   curr_acc: 0.65302979809   avg_acc： 0.757588828223
+Handling context 294 of 459
+context: 294   curr_acc: 0.588630738074   avg_acc： 0.757014140842
+Handling context 295 of 459
+context: 295   curr_acc: 0.615108764187   avg_acc： 0.756533105667
+Handling context 296 of 459
+context: 296   curr_acc: 0.68240292192   avg_acc： 0.756282665857
+Handling context 297 of 459
+context: 297   curr_acc: 0.786283555709   avg_acc： 0.756383678954
+Handling context 298 of 459
+context: 298   curr_acc: 0.753377407301   avg_acc： 0.756373590794
+Handling context 299 of 459
+context: 299   curr_acc: 0.650349900029   avg_acc： 0.756018996511
+Handling context 300 of 459
+context: 300   curr_acc: 0.643294504182   avg_acc： 0.755643248203
+Handling context 301 of 459
+context: 301   curr_acc: 0.763582342954   avg_acc： 0.755669623933
+Handling context 302 of 459
+context: 302   curr_acc: 0.58223165225   avg_acc： 0.755095326013
+Handling context 303 of 459
+context: 303   curr_acc: 0.650714956685   avg_acc： 0.754750836346
+Handling context 304 of 459
+context: 304   curr_acc: 0.702032539061   avg_acc： 0.754577420894
+Handling context 305 of 459
+context: 305   curr_acc: 0.71271260854   avg_acc： 0.754440159214
+Handling context 306 of 459
+context: 306   curr_acc: 0.648401342519   avg_acc： 0.754093627133
+Handling context 307 of 459
+context: 307   curr_acc: 0.759756667233   avg_acc： 0.754112073518
+Handling context 308 of 459
+context: 308   curr_acc: 0.630630731089   avg_acc： 0.753711160069
+Handling context 309 of 459
+context: 309   curr_acc: 0.572491200106   avg_acc： 0.753124687706
+Handling context 310 of 459
+context: 310   curr_acc: 0.668927751281   avg_acc： 0.752853084686
+Handling context 311 of 459
+context: 311   curr_acc: 0.687754173801   avg_acc： 0.752643763429
+Handling context 312 of 459
+context: 312   curr_acc: 0.654939537276   avg_acc： 0.752330608858
+Handling context 313 of 459
+context: 313   curr_acc: 0.656345322734   avg_acc： 0.752023946602
+Handling context 314 of 459
+context: 314   curr_acc: 0.554971766766   avg_acc： 0.751396391889
+Handling context 315 of 459
+context: 315   curr_acc: 0.832665505226   avg_acc： 0.751654389074
+Handling context 316 of 459
+context: 316   curr_acc: 0.75809382388   avg_acc： 0.751674767032
+Handling context 317 of 459
+context: 317   curr_acc: 0.687200956938   avg_acc： 0.751471379619
+Handling context 318 of 459
+context: 318   curr_acc: 0.617870388132   avg_acc： 0.751051250715
+Handling context 319 of 459
+context: 319   curr_acc: 0.665415778252   avg_acc： 0.750782800958
+Handling context 320 of 459
+context: 320   curr_acc: 0.692146857498   avg_acc： 0.750599563635
+Handling context 321 of 459
+context: 321   curr_acc: 0.720316897738   avg_acc： 0.750505225112
+Handling context 322 of 459
+context: 322   curr_acc: 0.854015882589   avg_acc： 0.750826686781
+Handling context 323 of 459
+context: 323   curr_acc: 0.756112129234   avg_acc： 0.75084305038
+Handling context 324 of 459
+context: 324   curr_acc: 0.774685062987   avg_acc： 0.750916636838
+Handling context 325 of 459
+context: 325   curr_acc: 0.698657365737   avg_acc： 0.750755839081
+Handling context 326 of 459
+context: 326   curr_acc: 0.689096746   avg_acc： 0.750566700759
+Handling context 327 of 459
+context: 327   curr_acc: 0.70516805963   avg_acc： 0.750427866994
+Handling context 328 of 459
+context: 328   curr_acc: 0.704982321876   avg_acc： 0.750289313503
+Handling context 329 of 459
+context: 329   curr_acc: 0.739182069442   avg_acc： 0.750255552882
+Handling context 330 of 459
+context: 330   curr_acc: 0.78418956591   avg_acc： 0.750358383225
+Handling context 331 of 459
+context: 331   curr_acc: 0.683414043584   avg_acc： 0.750156134465
+Handling context 332 of 459
+context: 332   curr_acc: 0.664368559678   avg_acc： 0.749897738155
+Handling context 333 of 459
+context: 333   curr_acc: 0.768363273453   avg_acc： 0.749953190213
+Handling context 334 of 459
+context: 334   curr_acc: 0.671635082267   avg_acc： 0.74971870486
+Handling context 335 of 459
+context: 335   curr_acc: 0.787341435877   avg_acc： 0.74983101152
+Handling context 336 of 459
+context: 336   curr_acc: 0.620050227381   avg_acc： 0.749444759186
+Handling context 337 of 459
+context: 337   curr_acc: 0.726690325852   avg_acc： 0.749377238612
+Handling context 338 of 459
+context: 338   curr_acc: 0.800399771559   avg_acc： 0.749528192852
+Handling context 339 of 459
+context: 339   curr_acc: 0.689148539302   avg_acc： 0.749350081779
+Handling context 340 of 459
+context: 340   curr_acc: 0.857163045398   avg_acc： 0.749667178731
+Handling context 341 of 459
+context: 341   curr_acc: 0.600717274357   avg_acc： 0.749230375492
+Handling context 342 of 459
+context: 342   curr_acc: 0.576721693896   avg_acc： 0.748725964143
+Handling context 343 of 459
+context: 343   curr_acc: 0.694436641698   avg_acc： 0.748567686235
+Handling context 344 of 459
+context: 344   curr_acc: 0.707613297245   avg_acc： 0.748448632778
+Handling context 345 of 459
+context: 345   curr_acc: 0.668128994022   avg_acc： 0.748215822231
+Handling context 346 of 459
+context: 346   curr_acc: 0.605292563468   avg_acc： 0.747802749229
+Handling context 347 of 459
+context: 347   curr_acc: 0.768239657267   avg_acc： 0.747861645218
+Handling context 348 of 459
+context: 348   curr_acc: 0.737585319458   avg_acc： 0.747832115546
+Handling context 349 of 459
+context: 349   curr_acc: 0.635894363276   avg_acc： 0.747511377001
+Handling context 350 of 459
+context: 350   curr_acc: 0.675904819036   avg_acc： 0.747306786835
+Handling context 351 of 459
+context: 351   curr_acc: 0.545306611853   avg_acc： 0.746731287761
+Handling context 352 of 459
+context: 352   curr_acc: 0.880582569019   avg_acc： 0.747111547083
+Handling context 353 of 459
+context: 353   curr_acc: 0.887663885578   avg_acc： 0.747509712348
+Handling context 354 of 459
+context: 354   curr_acc: 0.616204378436   avg_acc： 0.747138793325
+Handling context 355 of 459
+context: 355   curr_acc: 0.599741447892   avg_acc： 0.746723589535
+Handling context 356 of 459
+context: 356   curr_acc: 0.747824931925   avg_acc： 0.746726683194
+Handling context 357 of 459
+context: 357   curr_acc: 0.613741455569   avg_acc： 0.746354175553
+Handling context 358 of 459
+context: 358   curr_acc: 0.631571087216   avg_acc： 0.746033552402
+Handling context 359 of 459
+context: 359   curr_acc: 0.748859289303   avg_acc： 0.746041423535
+Handling context 360 of 459
+context: 360   curr_acc: 0.763364389805   avg_acc： 0.746089542886
+Handling context 361 of 459
+context: 361   curr_acc: 0.72066064106   avg_acc： 0.746019102714
+Handling context 362 of 459
+context: 362   curr_acc: 0.857825159915   avg_acc： 0.746327959226
+Handling context 363 of 459
+context: 363   curr_acc: 0.608339538347   avg_acc： 0.745947825835
+Handling context 364 of 459
+context: 364   curr_acc: 0.849443118536   avg_acc： 0.746232153562
+Handling context 365 of 459
+context: 365   curr_acc: 0.689801444043   avg_acc： 0.746077548879
+Handling context 366 of 459
+context: 366   curr_acc: 0.62837635054   avg_acc： 0.745755960905
+Handling context 367 of 459
+context: 367   curr_acc: 0.625022931572   avg_acc： 0.745426988073
+Handling context 368 of 459
+context: 368   curr_acc: 0.603263123934   avg_acc： 0.745040673225
+Handling context 369 of 459
+context: 369   curr_acc: 0.671556350626   avg_acc： 0.744841528719
+Handling context 370 of 459
+context: 370   curr_acc: 0.726176535747   avg_acc： 0.744791082792
+Handling context 371 of 459
+context: 371   curr_acc: 0.879690618762   avg_acc： 0.745154693402
+Handling context 372 of 459
+context: 372   curr_acc: 0.499233296824   avg_acc： 0.744493614378
+Handling context 373 of 459
+context: 373   curr_acc: 0.646550956831   avg_acc： 0.744231033527
+Handling context 374 of 459
+context: 374   curr_acc: 0.663888888889   avg_acc： 0.744016214959
+Handling context 375 of 459
+context: 375   curr_acc: 0.590668662675   avg_acc： 0.743607288152
+Handling context 376 of 459
+context: 376   curr_acc: 0.903748506571   avg_acc： 0.744033195648
+Handling context 377 of 459
+context: 377   curr_acc: 0.717242015025   avg_acc： 0.743962131509
+Handling context 378 of 459
+context: 378   curr_acc: 0.703253221395   avg_acc： 0.743854435979
+Handling context 379 of 459
+context: 379   curr_acc: 0.756206329634   avg_acc： 0.743887026728
+Handling context 380 of 459
+context: 380   curr_acc: 0.742226533433   avg_acc： 0.743882657009
+Handling context 381 of 459
+context: 381   curr_acc: 0.614067102062   avg_acc： 0.743541933767
+Handling context 382 of 459
+context: 382   curr_acc: 0.757731648616   avg_acc： 0.743579079618
+Handling context 383 of 459
+context: 383   curr_acc: 0.677279488559   avg_acc： 0.743405973636
+Handling context 384 of 459
+context: 384   curr_acc: 0.501193317422   avg_acc： 0.74277521151
+Handling context 385 of 459
+context: 385   curr_acc: 0.623727662531   avg_acc： 0.742465997097
+Handling context 386 of 459
+context: 386   curr_acc: 0.95313059034   avg_acc： 0.743011760292
+Handling context 387 of 459
+context: 387   curr_acc: 0.666802883327   avg_acc： 0.742814838129
+Handling context 388 of 459
+context: 388   curr_acc: 0.861961722488   avg_acc： 0.743121917728
+Handling context 389 of 459
+context: 389   curr_acc: 0.618471297519   avg_acc： 0.742801479116
+Handling context 390 of 459
+context: 390   curr_acc: 0.616506174854   avg_acc： 0.742477645002
+Handling context 391 of 459
+context: 391   curr_acc: 0.778428093645   avg_acc： 0.742569589884
+Handling context 392 of 459
+context: 392   curr_acc: 0.606234866828   avg_acc： 0.742221797223
+Handling context 393 of 459
+context: 393   curr_acc: 0.580515200202   avg_acc： 0.741810330055
+Handling context 394 of 459
+context: 394   curr_acc: 0.730448331323   avg_acc： 0.741781492495
+Handling context 395 of 459
+context: 395   curr_acc: 0.59447255318   avg_acc： 0.741408558471
+Handling context 396 of 459
+context: 396   curr_acc: 0.608798240352   avg_acc： 0.741073683931
+Handling context 397 of 459
+context: 397   curr_acc: 0.522124863089   avg_acc： 0.740522175566
+Handling context 398 of 459
+context: 398   curr_acc: 0.792174796748   avg_acc： 0.740651956021
+Handling context 399 of 459
+context: 399   curr_acc: 0.621229682741   avg_acc： 0.740352652078
+Handling context 400 of 459
+context: 400   curr_acc: 0.580441264162   avg_acc： 0.739952873608
+Handling context 401 of 459
+context: 401   curr_acc: 0.772685749086   avg_acc： 0.740034501726
+Handling context 402 of 459
+context: 402   curr_acc: 0.691932168551   avg_acc： 0.739914844181
+Handling context 403 of 459
+context: 403   curr_acc: 0.994242604725   avg_acc： 0.740545930436
+Handling context 404 of 459
+context: 404   curr_acc: 0.749477299881   avg_acc： 0.740568037786
+Handling context 405 of 459
+context: 405   curr_acc: 0.528402729366   avg_acc： 0.740044172827
+Handling context 406 of 459
+context: 406   curr_acc: 0.66805160726   avg_acc： 0.739866851237
+Handling context 407 of 459
+context: 407   curr_acc: 0.737562427968   avg_acc： 0.739861189263
+Handling context 408 of 459
+context: 408   curr_acc: 0.539481525626   avg_acc： 0.739370062636
+Handling context 409 of 459
+context: 409   curr_acc: 0.6269124847   avg_acc： 0.739095105233
+Handling context 410 of 459
+context: 410   curr_acc: 0.722003577818   avg_acc： 0.739053418581
+Handling context 411 of 459
+context: 411   curr_acc: 0.86969832736   avg_acc： 0.739371289405
+Handling context 412 of 459
+context: 412   curr_acc: 0.856543336759   avg_acc： 0.739655687578
+Handling context 413 of 459
+context: 413   curr_acc: 0.705741626794   avg_acc： 0.739573571209
+Handling context 414 of 459
+context: 414   curr_acc: 0.739924558269   avg_acc： 0.739574419003
+Handling context 415 of 459
+context: 415   curr_acc: 0.406789755807   avg_acc： 0.738772528249
+Handling context 416 of 459
+context: 416   curr_acc: 0.587205872714   avg_acc： 0.738408185327
+Handling context 417 of 459
+context: 417   curr_acc: 0.639157706093   avg_acc： 0.738170174585
+Handling context 418 of 459
+context: 418   curr_acc: 0.66702444842   avg_acc： 0.737999969499
+Handling context 419 of 459
+context: 419   curr_acc: 0.682350605519   avg_acc： 0.737867154787
+Handling context 420 of 459
+context: 420   curr_acc: 0.583432657926   avg_acc： 0.737499453604
+Handling context 421 of 459
+context: 421   curr_acc: 0.777739872068   avg_acc： 0.737595036546
+Handling context 422 of 459
+context: 422   curr_acc: 0.570605900018   avg_acc： 0.737199327692
+Handling context 423 of 459
+context: 423   curr_acc: 0.675531179426   avg_acc： 0.737053540107
+Handling context 424 of 459
+context: 424   curr_acc: 0.674910607867   avg_acc： 0.736906976588
+Handling context 425 of 459
+context: 425   curr_acc: 0.7917131178   avg_acc： 0.737035932214
+Handling context 426 of 459
+context: 426   curr_acc: 0.627869133265   avg_acc： 0.736779672123
+Handling context 427 of 459
+context: 427   curr_acc: 0.585245202559   avg_acc： 0.736424790461
+Handling context 428 of 459
+context: 428   curr_acc: 0.627547974414   avg_acc： 0.736170405377
+Handling context 429 of 459
+context: 429   curr_acc: 0.594338235294   avg_acc： 0.735839794258
+Handling context 430 of 459
+context: 430   curr_acc: 0.270858164482   avg_acc： 0.73475844163
+Handling context 431 of 459
+context: 431   curr_acc: 0.715108199325   avg_acc： 0.734712849421
+Handling context 432 of 459
+context: 432   curr_acc: 0.750557641042   avg_acc： 0.734749527179
+Handling context 433 of 459
+context: 433   curr_acc: 0.740464839094   avg_acc： 0.734762726514
+Handling context 434 of 459
+context: 434   curr_acc: 0.466547548144   avg_acc： 0.73414471919
+Handling context 435 of 459
+context: 435   curr_acc: 0.688825757576   avg_acc： 0.73404053767
+Handling context 436 of 459
+context: 436   curr_acc: 0.786751906827   avg_acc： 0.734161435305
+Handling context 437 of 459
+context: 437   curr_acc: 0.656053108027   avg_acc： 0.733982697714
+Handling context 438 of 459
+context: 438   curr_acc: 0.878277711561   avg_acc： 0.734312138385
+Handling context 439 of 459
+context: 439   curr_acc: 0.843160611475   avg_acc： 0.734560084793
+Handling context 440 of 459
+context: 440   curr_acc: 0.443915028787   avg_acc： 0.733899527848
+Handling context 441 of 459
+context: 442   curr_acc: 0.600658290344   avg_acc： 0.733597393522
+Handling context 442 of 459
+context: 444   curr_acc: 0.729600952948   avg_acc： 0.733588351801
+Handling context 443 of 459
+context: 445   curr_acc: 0.758215421487   avg_acc： 0.733643943381
+Handling context 444 of 459
+context: 446   curr_acc: 0.712076145152   avg_acc： 0.733595367259
+Handling context 445 of 459
+context: 447   curr_acc: 0.702994011976   avg_acc： 0.733526600168
+Handling context 446 of 459
+context: 448   curr_acc: 0.399642644431   avg_acc： 0.732777981433
+Handling context 447 of 459
+context: 449   curr_acc: 0.525388291517   avg_acc： 0.732314022395
+Handling context 448 of 459
+context: 450   curr_acc: 0.582172850005   avg_acc： 0.73197888585
+Handling context 449 of 459
+context: 451   curr_acc: 0.713176972281   avg_acc： 0.731937010764
+Handling context 450 of 459
+context: 452   curr_acc: 0.730442583732   avg_acc： 0.731933689815
+Handling context 451 of 459
+context: 453   curr_acc: 0.7078891258   avg_acc： 0.731880375926
+Handling context 452 of 459
+context: 454   curr_acc: 0.653392089658   avg_acc： 0.731706729275
+Handling context 453 of 459
+context: 455   curr_acc: 0.73786523554   avg_acc： 0.731720324211
+Handling context 454 of 459
+context: 456   curr_acc: 0.655691299166   avg_acc： 0.731552859399
+Handling context 455 of 459
+context: 457   curr_acc: 0.606929510155   avg_acc： 0.731278961928
+Handling context 456 of 459
+context: 458   curr_acc: 0.395870557872   avg_acc： 0.730543417182
+Handling context 457 of 459
+context: 459   curr_acc: 0.329565734682   avg_acc： 0.72966600431
+Handling context 458 of 459
+context: 460   curr_acc: 0.0166567519334   avg_acc： 0.728109215549
+Handling context 459 of 459
+context: 462   curr_acc: 0.763831052945   avg_acc： 0.728187040903
+##############Final AUC for iter-0:0.728187040903##############
