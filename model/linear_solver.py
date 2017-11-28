@@ -112,6 +112,7 @@ class LinearSolver(object):
         :param batch_size batch的大小，超参数
         :param a_1 超参数, 是线性参数正则项的权重
         :param eta ，超参数，更新的步长
+        :return W  type: scipy.sparse.csc.csc_matrix
         '''
         ## 统计loss
         final_loss = 0.

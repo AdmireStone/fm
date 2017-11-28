@@ -43,14 +43,23 @@ def getQuadraticLoss(Z,X_ci,X_cj,linearSolver):
     PAI=linearSolver.getPAI(X_ci,X_cj,Z)
     return PAI
 
-def getTotalLoss(ele_linear_loss,ele_quadratic_loss):
+def getTotalObjLoss(ele_linear_loss,ele_quadratic_loss,a_1,a_3,W,lambda_list):
     '''
     :param ele_linear_loss is a one-dim ndarray
     :param ele_quadratic_loss is a one-dim ndarray
     '''
     assert len(ele_linear_loss)==len(ele_quadratic_loss)
     size=len(ele_linear_loss)
-    return np.sum(ele_linear_loss*ele_quadratic_loss)/size
+    loss=np.sum(ele_linear_loss*ele_quadratic_loss)/size
+    linear_regular=0.5*a_1*safe_sparse_dot(W.T,W)
+    ## 算出来也是csc_matrix，所以要转一下
+    linear_regular=linear_regular.data[0]
+    if len(lambda_list)!=0:
+        qudratic_regular=a_3*np.sum(lambda_list)
+    else:
+        qudratic_regular=0.
+    print 'regular:W=',linear_regular,'Z=',qudratic_regular    
+    return loss+linear_regular+qudratic_regular
     
 def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_epsilon,context_num):
     '''
@@ -79,6 +88,7 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
     
     print 'sum(U):',np.sum(U)
     old_ele_quadratic_loss=[1]*context_num
+    lambda_list=[]
     for iter_count in range(boosting_iters):
         print '##############################boosting_iter:',iter_count,'#########################'
         
@@ -92,10 +102,10 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
        
         # 输出当前的loss
         print '#######'
-        print 'W is finished:',W.shape,'耗时:',(time.time()-start)/60,'min'
+        print 'W is finished:',W.shape,type(W),'耗时:',(time.time()-start)/60,'min'
         start=time.time() 
         ele_linear_loss=getLinearElementLoss(W,X_uv,X_uf)
-        total_loss=getTotalLoss(ele_linear_loss,old_ele_quadratic_loss)
+        total_loss=getTotalObjLoss(ele_linear_loss,old_ele_quadratic_loss,a_1,a_3,W,lambda_list)
         print 'Linear loss:',total_loss,'耗时:',(time.time()-start)/60,'min'   
    
 
@@ -122,12 +132,13 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
         
         W_old=W
         Z+=lambda_t*z_t
+        lambda_list.append(lambda_t)
         
         # 输出当前的loss
         # 80000 条数据 算一遍需要 14.0426008503
         start=time.time() 
         ele_quadratic_loss=getQuadraticLoss(Z,X_uv,X_uf,linearSolver)
-        total_loss=getTotalLoss(ele_linear_loss,ele_quadratic_loss)
+        total_loss=getTotalObjLoss(ele_linear_loss,ele_quadratic_loss,a_1,a_3,W,lambda_list)
         print 'Quadratic loss:',total_loss,'耗时:',(time.time()-start)/60,'min'
         print '#######'
           
