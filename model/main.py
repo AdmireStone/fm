@@ -52,7 +52,9 @@ if __name__=='__main__':
         context_num = args.isDebug
         
     start=time.time()
-    W,Z=train(boosting_iters=args.iters, X_uv=X_ci, X_uf=X_cj, linear_epoc=args.lepoc, batch_size=args.batch_size, eta=args.eta,
+    ## 注意的X_uv和X_uf的赋值
+    W,Z=train(boosting_iters=args.iters, X_uv=X_ci[:context_num], X_uf=X_cj[:context_num], linear_epoc=args.lepoc, batch_size=args.batch_size, eta=args.eta,
             a_1=args.alpha_1, a_3=args.alpha_3, lambda_epsilon=args.epsilon, context_num=context_num)
+    
     print 'Training end,total time:',(time.time()-start)/60,'min'
     print 'Done!'

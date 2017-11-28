@@ -28,6 +28,30 @@ def save2pkl(iter_count,flod_name,datapath,Z,W):
     pickle.dump(Z, fo)
     fo.close()
     
+def getLinearElementLoss(W,X_ci,X_cj):
+    '''
+    :param W should be a column vector
+    :param X_ci should be sparse matrix
+    return exp(-W.Tb_i) is (80000,) ndarray
+    '''
+    B=X_ci-X_cj    
+    linear_loss=(safe_sparse_dot(B,W))
+    temp=np.exp(-linear_loss.data)
+    return temp
+
+def getQuadraticLoss(Z,X_ci,X_cj,linearSolver):
+    PAI=linearSolver.getPAI(X_ci,X_cj,Z)
+    return PAI
+
+def getTotalLoss(ele_linear_loss,ele_quadratic_loss):
+    '''
+    :param ele_linear_loss is a one-dim ndarray
+    :param ele_quadratic_loss is a one-dim ndarray
+    '''
+    assert len(ele_linear_loss)==len(ele_quadratic_loss)
+    size=len(ele_linear_loss)
+    return np.sum(ele_linear_loss*ele_quadratic_loss)/size
+    
 def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_epsilon,context_num):
     '''
     :param boosting_iters
@@ -54,9 +78,9 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
         os.makedirs(modelPath)
     
     print 'sum(U):',np.sum(U)
-    
+    old_ele_quadratic_loss=[1]*context_num
     for iter_count in range(boosting_iters):
-        print '#############boosting_iter:',iter_count,'#########################'
+        print '##############################boosting_iter:',iter_count,'#########################'
         
         ###
         print 'context_num',context_num
@@ -65,16 +89,29 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
         linearSolver=LinearSolver(batch_size,linear_epoc,X_uv,X_uf,Z,a_1,eta)
         start=time.time()
         W=linearSolver.fit()
+       
+        # 输出当前的loss
+        print '#######'
         print 'W is finished:',W.shape,'耗时:',(time.time()-start)/60,'min'
+        start=time.time() 
+        ele_linear_loss=getLinearElementLoss(W,X_uv,X_uf)
+        total_loss=getTotalLoss(ele_linear_loss,old_ele_quadratic_loss)
+        print 'Linear loss:',total_loss,'耗时:',(time.time()-start)/60,'min'   
+   
+
+        
+        print '#######Update Z'
         # 更新Z
         start=time.time()
         z_t,eigenval=QuadraticSolver.getComponentZ_eigval(context_num, U,d_dim,X_uv,X_uf)
-        print 'Z_t eigenval is finished:',Z.shape,eigenval,'耗时:',(time.time()-start)/60,'min'
+        print 'Z_t is finished:',Z.shape,'eigenval is',eigenval,'耗时:',(time.time()-start)/60,'min'
+
         
         # 这里仅做验证使用，真正使用的时候，应该去掉abs
         if np.abs(eigenval) < a_3:
             break;
-            
+        
+ 
         print 'lambdaSearch for t#####################'
         start=time.time()      
         lambda_t,search_times=QuadraticSolver.lambdaSearch(context_num,z_t,U,a_3,lambda_epsilon,[0,100],W,W_old,X_uv,X_uf)      
@@ -86,20 +123,24 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
         W_old=W
         Z+=lambda_t*z_t
         
+        # 输出当前的loss
+        # 80000 条数据 算一遍需要 14.0426008503
+        start=time.time() 
+        ele_quadratic_loss=getQuadraticLoss(Z,X_uv,X_uf,linearSolver)
+        total_loss=getTotalLoss(ele_linear_loss,ele_quadratic_loss)
+        print 'Quadratic loss:',total_loss,'耗时:',(time.time()-start)/60,'min'
+        print '#######'
+          
+        #保存当前的二次项loss,也就是线性项计算中的PAI，一遍下一次计算线性项权重和loss    
+        old_ele_quadratic_loss=ele_quadratic_loss
+        
         # To do : change to genearal
         print 'saving model...'
-        save2pkl(iter_count,'u1',modelPath,Z,W)
+#测试需要临时注释        save2pkl(iter_count,'u1',modelPath,Z,W)
         start=time.time()
         print 'saving model end','耗时：',(time.time()-start)/60,'min'
-        ## 这里输出损失total loss ,boosting 的第n次
-        
-        
-        
-        
-        
-        
-        
-        
+
+ 
     return W,Z
 
 
