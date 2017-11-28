@@ -130,23 +130,32 @@ class QuadraticSolver():
                 gr = QuadraticSolver.getGammaRelativeRatio(c, W, W_old,X_uv,X_uf)
                 Hc = QuadraticSolver.get_Hc(Ac, z_t)
                 cost_lambda_t += (Hc - a_3) * gr * U[c] * np.exp(-lambda_t * Hc)
-            return cost_lambda_t
+            return cost_lambda_t[0]
 
         def bi_search(lambda_l, lambda_u, epsilon):
             lambda_mid = 0.0
+            search_times=0
             while True:
                 lambda_mid = 0.5 * (lambda_l + lambda_u)
+                start=time.time()
                 cost_lambda_t = costfun_lambda_t(context_num, z_t, a_3, lambda_mid, W, W_old, X_uv, X_uf)
                 if cost_lambda_t > 0:
                     lambda_l = lambda_mid
                 else:
                     lambda_u = lambda_mid
-                if lambda_u - lambda_l < epsilon:  # 这里要小心，太小的浮点运算可能不准确。
-                    #                     print lambda_l,lambda_u,epsilon
+                if lambda_u - lambda_l < epsilon:  # 这里要小心，太小的浮点运算可能不准确。 
                     break
-                    #                 print '[lambda_l,lambda_u]:', lambda_l,lambda_u
-            return lambda_mid
-
+                search_times+=1       
+            return lambda_mid,search_times
+        
+        start=time.time()
+        lambda_l=costfun_lambda_t(context_num, z_t, a_3, inital_interval[0], W, W_old, X_uv, X_uf)       
+        lambda_u=costfun_lambda_t(context_num, z_t, a_3, inital_interval[1], W, W_old, X_uv, X_uf)
+        print '每一次costfun_lambda_t','耗时:',(time.time()-start)/120,'min'
+        print 'lambda_t=',inital_interval[0],'costfun_lambda_t=',lambda_l
+        print 'lambda_t=',inital_interval[1],'costfun_lambda_t=',lambda_u
+        print '########################'
+ 
         return bi_search(inital_interval[0], inital_interval[1], lambda_epsilon)
     
     @staticmethod

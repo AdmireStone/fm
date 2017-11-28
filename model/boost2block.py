@@ -49,33 +49,56 @@ def train(boosting_iters,X_uv,X_uf,linear_epoc,batch_size,eta,a_1,a_3,lambda_eps
     modelPath+=str(datetime.datetime.now().hour)
     datapath='/home/zju/dgl/dataset/recommend/ml-100k/'
     modelPath=datapath+modelPath+'/'
-    os.makedirs(modelPath)
+    
+    if not os.path.exists(modelPath):
+        os.makedirs(modelPath)
     
     print 'sum(U):',np.sum(U)
     
     for iter_count in range(boosting_iters):
         print '#############boosting_iter:',iter_count,'#########################'
+        
+        ###
+        print 'context_num',context_num
+        ###
 
         linearSolver=LinearSolver(batch_size,linear_epoc,X_uv,X_uf,Z,a_1,eta)
-
+        start=time.time()
         W=linearSolver.fit()
-        print 'W is finished:',W.shape
+        print 'W is finished:',W.shape,'耗时:',(time.time()-start)/60,'min'
         # 更新Z
+        start=time.time()
         z_t,eigenval=QuadraticSolver.getComponentZ_eigval(context_num, U,d_dim,X_uv,X_uf)
-        print 'Z_t eigenval is finished:',Z.shape,eigenval
+        print 'Z_t eigenval is finished:',Z.shape,eigenval,'耗时:',(time.time()-start)/60,'min'
+        
+        # 这里仅做验证使用，真正使用的时候，应该去掉abs
         if np.abs(eigenval) < a_3:
             break;
+            
         print 'lambdaSearch for t#####################'
-        lambda_t=QuadraticSolver.lambdaSearch(context_num,z_t,U,a_3,lambda_epsilon,[0,100],W,W_old,X_uv,X_uf)
-        print 'lambda_t is finished:',lambda_t
+        start=time.time()      
+        lambda_t,search_times=QuadraticSolver.lambdaSearch(context_num,z_t,U,a_3,lambda_epsilon,[0,100],W,W_old,X_uv,X_uf)      
+        print 'lambda_t is finished:',lambda_t,'耗时:',(time.time()-start)/60,'min','search_times:',search_times
+        start=time.time()
         U=QuadraticSolver.updateU(context_num,U,z_t,lambda_t,W,W_old,X_uv,X_uf)
-        print 'update U  is finished，the sum(u)=:',np.sum(U)
+        print 'update U  is finished，the sum(u)=:',np.sum(U),'耗时:',(time.time()-start)/60,'min'
+        
         W_old=W
         Z+=lambda_t*z_t
         
         # To do : change to genearal
+        print 'saving model...'
         save2pkl(iter_count,'u1',modelPath,Z,W)
+        start=time.time()
+        print 'saving model end','耗时：',(time.time()-start)/60,'min'
         ## 这里输出损失total loss ,boosting 的第n次
+        
+        
+        
+        
+        
+        
+        
         
     return W,Z
 
